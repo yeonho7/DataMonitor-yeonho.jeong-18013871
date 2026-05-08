@@ -26,6 +26,7 @@ MVC 패턴, 단방향 의존: `main.py` → `controller` → `DataPersistence/re
 ```
 DataPersistence/model/      도메인 모델 (Sample, Order) — 서브모듈 제공
 DataPersistence/repository/ JSON 파일 CRUD (SampleRepository, OrderRepository) — 서브모듈 제공
+DummyDataGenerator/         더미 데이터 CLI — [9] 메뉴에서 subprocess 호출
 controller/                 비즈니스 로직 (MonitorController — 주문 현황·재고 상태 계산)
 view/                       콘솔 출력 전용 (MonitorView — 입출력, 비즈니스 로직 없음)
 data/                       런타임 데이터 (samples.json, orders.json)

@@ -43,7 +43,7 @@ DataMonitor가 조회하는 데이터는 반도체 시료 생산주문관리 시
 | sample_id | str | 시료 ID (FK) |
 | customer | str | 고객명 |
 | quantity | int | 주문 수량 (ea) |
-| status | Enum | 아래 상태 참조 |
+| status | str | 아래 상태 참조 |
 
 ### 주문 상태 흐름
 
@@ -160,3 +160,4 @@ DataMonitor/
 2. [1] 주문량 확인 → 상태별 건수 및 목록 출력 확인, REJECTED 미포함 확인
 3. [2] 재고량 확인 → 시료별 재고 수량 + 여유/부족/고갈 상태 및 잔여율 출력 확인
 4. `data/*.json` 수동 편집 후 재실행 → 변경된 데이터 반영 확인
+5. [9] 더미 데이터 생성 → DummyDataGenerator CLI 메뉴 진입 확인, `data/` 파일 갱신 확인
