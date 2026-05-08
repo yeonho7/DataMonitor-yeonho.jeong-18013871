@@ -89,6 +89,7 @@ RESERVED → (거절) → REJECTED
 - 서브메뉴:
   - [1] 주문량 확인
   - [2] 재고량 확인
+  - [9] 더미 데이터 생성 (DummyDataGenerator 호출)
   - [0] 종료
 
 ---
@@ -107,25 +108,26 @@ RESERVED → (거절) → REJECTED
 
 ```
 DataMonitor/
-├── docs/
-│   └── PRD.md
+├── DataPersistence/          # 서브모듈 — model, repository 제공
+│   ├── model/
+│   │   ├── sample.py         # Sample 도메인 모델
+│   │   └── order.py          # Order 도메인 모델 (status: str)
+│   └── repository/
+│       ├── sample_repository.py
+│       └── order_repository.py
+├── DummyDataGenerator/       # 서브모듈 — 더미 데이터 CLI
+├── config.py                 # sys.path 설정, DATA_DIR, 상태 상수
+├── conftest.py               # pytest sys.path 초기화
+├── controller/
+│   └── monitor_controller.py # 모니터링 비즈니스 로직
+├── view/
+│   └── monitor_view.py       # 콘솔 출력 및 입력 ([9] 더미 데이터 생성 포함)
 ├── data/
 │   ├── samples.json          # 시료 데이터
 │   └── orders.json           # 주문 데이터
-├── model/
-│   ├── __init__.py
-│   ├── sample.py             # Sample 도메인 모델
-│   └── order.py              # Order 도메인 모델 + OrderStatus Enum
-├── repository/
-│   ├── __init__.py
-│   ├── sample_repository.py  # 시료 CRUD (JSON I/O)
-│   └── order_repository.py   # 주문 CRUD (JSON I/O)
-├── controller/
-│   ├── __init__.py
-│   └── monitor_controller.py # 모니터링 비즈니스 로직
-├── view/
-│   ├── __init__.py
-│   └── monitor_view.py       # 콘솔 출력 및 입력
+├── tests/
+│   └── controller/
+│       └── test_monitor_controller.py
 └── main.py                   # 진입점
 ```
 

@@ -1,0 +1,6 @@
+[submodule "DataPersistence"]
+	path = DataPersistence
+	url = https://github.com/yeonho7/DataPersistence-yeonho-jeong-18013871.git
+[submodule "DummyDataGenerator"]
+	path = DummyDataGenerator
+	url = https://github.com/yeonho7/DummyDataGenerator-yeonho-jeong-18013871.git
