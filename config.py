@@ -1,7 +1,9 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "DataPersistence"))
+_dp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "DataPersistence")
+if _dp not in sys.path:
+    sys.path.append(_dp)
 
 DATA_DIR = os.environ.get(
     "DATA_DIR",

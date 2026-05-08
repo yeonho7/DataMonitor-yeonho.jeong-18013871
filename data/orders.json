@@ -1,0 +1,47 @@
+[
+  {
+    "order_id": "ORD-20260508-0001",
+    "sample_id": "S-001",
+    "customer": "SK하이닉스",
+    "quantity": 150,
+    "status": "RESERVED",
+    "created_at": "2026-05-08T00:00:00+00:00",
+    "updated_at": "2026-05-08T00:00:00+00:00"
+  },
+  {
+    "order_id": "ORD-20260508-0002",
+    "sample_id": "S-003",
+    "customer": "삼성전자 파운드리",
+    "quantity": 200,
+    "status": "PRODUCING",
+    "created_at": "2026-05-08T00:00:00+00:00",
+    "updated_at": "2026-05-08T00:00:00+00:00"
+  },
+  {
+    "order_id": "ORD-20260508-0003",
+    "sample_id": "S-001",
+    "customer": "LG이노텍",
+    "quantity": 300,
+    "status": "CONFIRMED",
+    "created_at": "2026-05-08T00:00:00+00:00",
+    "updated_at": "2026-05-08T00:00:00+00:00"
+  },
+  {
+    "order_id": "ORD-20260508-0004",
+    "sample_id": "S-004",
+    "customer": "DB하이텍",
+    "quantity": 400,
+    "status": "RELEASED",
+    "created_at": "2026-05-08T00:00:00+00:00",
+    "updated_at": "2026-05-08T00:00:00+00:00"
+  },
+  {
+    "order_id": "ORD-20260508-0005",
+    "sample_id": "S-002",
+    "customer": "네패스",
+    "quantity": 100,
+    "status": "REJECTED",
+    "created_at": "2026-05-08T00:00:00+00:00",
+    "updated_at": "2026-05-08T00:00:00+00:00"
+  }
+]
